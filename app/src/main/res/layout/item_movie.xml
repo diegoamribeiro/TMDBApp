@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="8dp"
+    android:focusable="true"
+    android:clickable="true"
+    android:elevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivCover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <TextView
+            android:id="@+id/tvYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/mostarda"
+            android:fontFamily="sans-serif-black"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/ivCover"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/ivCover"
+            app:layout_constraintTop_toTopOf="@+id/ivCover"
+            tools:text="1999" />
+
+        <TextView
+            android:id="@+id/tvGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/vermilion"
+            android:fontFamily="sans-serif-black"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/ivCover"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/ivCover"
+            app:layout_constraintTop_toTopOf="@+id/ivCover"
+            tools:text="Action" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/black_50_percent_opacity"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Vingadores" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
