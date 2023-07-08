@@ -54,11 +54,10 @@ class FirstFragment : Fragment() {
         binding.rvMovies.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvMovies.adapter = adapter
 
-        lifecycleScope.launch(Dispatchers.IO) {
+        lifecycleScope.launch(Dispatchers.Main) {
             val data = repository.getNowPlaying(1)
             Log.d("***Data", data.body().toString())
-
-            adapter.setData( data.body()!!.movies)
+            adapter.setData(data.body()!!.movies)
         }
     }
 

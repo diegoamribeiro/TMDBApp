@@ -54,10 +54,8 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ListViewHolder>() {
     }
 
     fun setData(movieList: List<Movie>){
-        val movieDiffUtil = MovieDiffUtil(dataList, movieList)
-        val movieListResult = DiffUtil.calculateDiff(movieDiffUtil)
         this.dataList = movieList
-        movieListResult.dispatchUpdatesTo(this)
+        notifyDataSetChanged()
     }
 
 
